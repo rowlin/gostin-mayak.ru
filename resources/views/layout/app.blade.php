@@ -10,8 +10,6 @@
 
         <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
         <link rel="icon" type="image/png" href="{{ asset('/assets/ico/favicon.png') }}">
-
-    <script src="{{ asset('/js/vendor.js') }}"></script>
     <script type="text/javascript">
         var paths = {
             'current': '{{ Request::url() }}'
@@ -29,8 +27,8 @@
 
 
     <!-- Scripts -->
-    <script src="{{ asset('/assets/js/vendor.js') }}"></script>
-    <script src="{{ asset('/assets/js/app.js') }}"></script>
+    <script src="{{ asset('/js/vendor.js') }}"></script>
+
     @yield('scripts')
 </body>
 </html>

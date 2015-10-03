@@ -15,7 +15,7 @@
                 <h4>Cанкт-Петербург</h4>
                 <h4>Гжатская д.22 к.1</h4>
                 <button class="btn btn-info btn-primary active" style="min-width: 160px; max-width: 160px;" >Посмотреть на карте</button>
-                <h4>+7 (921) 764 27 94<h4>
+                <h4>+7 (921) 764 27 94</h4>
                         <button class="btn btn-default btn-danger active" style="min-width: 160px; max-width: 160px;">  Забронировать  </button>
             </div>
         </div><!--row-->
