@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('nomer', 'NomerController@index');
+Route::get('nomer/{id}','NomerController@show');
