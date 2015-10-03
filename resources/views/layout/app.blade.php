@@ -8,6 +8,10 @@
     <meta name="author" content="">
     <title>App</title>
 
+        <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+        <link rel="icon" type="image/png" href="{{ asset('/assets/ico/favicon.png') }}">
+
+    <script src="{{ asset('/js/vendor.js') }}"></script>
     <script type="text/javascript">
         var paths = {
             'current': '{{ Request::url() }}'

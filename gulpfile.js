@@ -1,16 +1,17 @@
 var elixir = require('laravel-elixir');
+var bowerDir = './resources/assets/bower/';
 
-/*
- |--------------------------------------------------------------------------
- | Elixir Asset Management
- |--------------------------------------------------------------------------
- |
- | Elixir provides a clean, fluent API for defining some basic Gulp tasks
- | for your Laravel application. By default, we are compiling the Sass
- | file for our application, as well as publishing vendor resources.
- |
- */
+var lessPaths = [
+    bowerDir + "bootstrap/less",
+    bowerDir + "bootstrap-datepicker/less"
+];
+
 
 elixir(function(mix) {
-    mix.sass('app.scss');
+  mix.less('app.less', 'public/css', { paths: lessPaths })
+    .scripts([
+        '../bower/jquery/dist/jquery.js',
+        '../bower/bootstrap-datepicker/dist/js/bootstrap-datepicker.js',
+        '../bower/bootstrap/dist/js/bootstrap.js'
+    ], 'public/js/vendor.js');
 });
