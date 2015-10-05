@@ -16,6 +16,10 @@
                     <a href="{{ url('/nomer') }}">Номера</a>
                 </li>
                 <li>
+                    <a href="{{ url('/feed/show') }}">Отзывы</a>
+                </li>
+
+                <li>
                     <a href="#">Как добраться</a>
                 </li>
                 </ul>
