@@ -9,6 +9,7 @@
     <title>App</title>
 
         <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+        <link href="{{ asset('/css/datepicker.css') }}" rel="stylesheet">
         <link rel="icon" type="image/png" href="{{ asset('/assets/ico/favicon.png') }}">
     <script type="text/javascript">
         var paths = {
@@ -28,7 +29,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('/js/vendor.js') }}"></script>
-
-    @yield('scripts')
+    <script src="{{ asset('/js/datepicker.js') }}"></script>
+ @yield('scripts')
 </body>
 </html>

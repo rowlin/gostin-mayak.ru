@@ -18,3 +18,4 @@ Route::get('/', function () {
 Route::get('nomer', 'NomerController@index');
 Route::get('nomer/{id}','NomerController@show');
 Route::resource('feed','FeedsController');
+Route::resource('comment','CommentController');
