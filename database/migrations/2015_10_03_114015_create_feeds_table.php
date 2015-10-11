@@ -16,6 +16,7 @@ class CreateFeedsTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->text('comment');
+            $table->integer('nomer');
             $table->string('name');
             $table->date('u_start');
             $table->date('u_end');

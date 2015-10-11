@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Nomer extends Model
 {
-
+protected $table = "nomers";
 
     protected $fillable = [
         'name',

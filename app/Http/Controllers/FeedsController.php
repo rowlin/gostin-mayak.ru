@@ -35,7 +35,9 @@ class FeedsController extends Controller
     public function store(Request $request)
     {
         $feed=$request->all();
+
         Feed::create($feed);
+        //var_dump($feed);
         return redirect('feed');
     }
 

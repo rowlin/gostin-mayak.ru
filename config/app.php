@@ -113,6 +113,7 @@ return [
         /*
          * Laravel Framework Service Providers...
          */
+        'MaddHatter\LaravelFullcalendar\ServiceProvider',
         'Collective\Html\HtmlServiceProvider',
         Illuminate\Foundation\Providers\ArtisanServiceProvider::class,
         Illuminate\Auth\AuthServiceProvider::class,
@@ -160,6 +161,7 @@ return [
     */
 
     'aliases' => [
+        'Calendar' => 'MaddHatter\LaravelFullcalendar\Facades\Calendar',
         'Form' => 'Collective\Html\FormFacade',
         'Html' => 'Collective\Html\HtmlFacade',
         'App'       => Illuminate\Support\Facades\App::class,

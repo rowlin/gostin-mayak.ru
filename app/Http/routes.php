@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('nomer', 'NomerController@index');
-Route::get('nomer/{id}','NomerController@show');
+Route::resource('nomer', 'NomerController');
 Route::resource('feed','FeedsController');
 Route::resource('comment','CommentController');
+Route::resource('bron', 'BronController');

@@ -16,12 +16,17 @@
                     <a href="{{ url('/nomer') }}">Номера</a>
                 </li>
                 <li>
-                    <a href="{{ url('/feed/show') }}">Отзывы</a>
+                    <a href="{{ url('/feed/') }}">Отзывы</a>
                 </li>
 
                 <li>
                     <a href="#">Как добраться</a>
                 </li>
+
+                <li>
+                    <a href="#">Контакты </a>
+                </li>
+
                 </ul>
 
             <!--ul class="nav navbar-nav navbar-right">

@@ -15,9 +15,9 @@
         <table class="table">
             <thead>
             <tr>
-                <th> Проживал в мини-отеле с: <input type="text" class="span2" value="" id="dpd1" ></th>
-                <th> до : <input type="text" class="span2" value="" id="dpd2" ></th>
-                <th> в номере : {!! Form::select('comment', ['Трехместный номер', 'Двухместный номер №4', 'Двухместный номер №7',
+                <th> Проживал в мини-отеле с:{!! Form::text('u_start', null , array('type'=> 'text', 'class' => 'span2','id'=>'dpd1')) !!}</th>
+                <th> до : {!! Form::text('u_end', null , array('type'=> 'text', 'class' => 'span2','id'=>'dpd2')) !!}</th>
+                <th> в номере : {!! Form::select('nomer', ['Трехместный номер', 'Двухместный номер №4', 'Двухместный номер №7',
                  'Одноместный номер', 'Vip (аппартаменты)']) !!}</th>
             </tr>
             </thead>
@@ -34,6 +34,8 @@
 
     </div>
 </div>
+    </div>
+
 @endsection
 
 @section('scripts')
@@ -41,12 +43,13 @@
         // When the document is ready
         $(document).ready(function () {
             var nowTemp = new Date();
-            var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+          //  var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
 
-            var checkin = $('#dpd1').datepicker({
-                onRender: function(date) {
-                    return date.valueOf() < now.valueOf() ? 'disabled' : '';
-                }
+            var checkin = $('#dpd1').datepicker( {
+             //   onRender: function(date) {
+                   // return date.valueOf() < now.valueOf() ? 'disabled' : '';
+                    format: 'yyyy-mm-dd'
+              //  }
             }).on('changeDate', function(ev) {
                 if (ev.date.valueOf() > checkout.date.valueOf()) {
                     var newDate = new Date(ev.date)
@@ -57,9 +60,10 @@
                 $('#dpd2')[0].focus();
             }).data('datepicker');
             var checkout = $('#dpd2').datepicker({
-                onRender: function(date) {
-                    return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
-                }
+                format: 'yyyy-mm-dd'
+           //     onRender: function(date) {
+            //        return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
+             //   }
             }).on('changeDate', function(ev) {
                 checkout.hide();
             }).data('datepicker');

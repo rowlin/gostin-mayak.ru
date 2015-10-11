@@ -1,8 +1,7 @@
-comment create
-
+<h2>Отзыв</h2>
 
 @section('content')
-
+<>
     {!! Form::open([
     'route' => 'comment.store'
 ]) !!}

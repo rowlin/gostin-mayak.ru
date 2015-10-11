@@ -19,6 +19,7 @@ class CreateNomersTable extends Migration
             $table->text('opis');
             $table->integer('k_mest');
             $table->integer('price');
+            $table->string('url');
             $table->integer('price_pol');//за полсуток
             $table->integer('price_oll');//при брони польностью номера
             $table->timestamps();
