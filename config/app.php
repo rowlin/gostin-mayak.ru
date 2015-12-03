@@ -12,8 +12,8 @@ return [
     | application. If disabled, a simple generic error page is shown.
     |
     */
-
-    'debug' => env('APP_DEBUG', true),
+    'debug' => true,
+        //env('APP_DEBUG', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -52,7 +52,8 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'ru',
+    'locales' => ['en', 'ru'],
 
     /*
     |--------------------------------------------------------------------------
@@ -113,6 +114,7 @@ return [
         /*
          * Laravel Framework Service Providers...
          */
+        Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
         'MaddHatter\LaravelFullcalendar\ServiceProvider',
         'Collective\Html\HtmlServiceProvider',
         Illuminate\Foundation\Providers\ArtisanServiceProvider::class,
@@ -161,6 +163,7 @@ return [
     */
 
     'aliases' => [
+        'LaravelLocalization'   => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
         'Calendar' => 'MaddHatter\LaravelFullcalendar\Facades\Calendar',
         'Form' => 'Collective\Html\FormFacade',
         'Html' => 'Collective\Html\HtmlFacade',

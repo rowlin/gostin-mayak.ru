@@ -24,32 +24,30 @@
         <div class="col-xs-2 "><img src="{{ url('img/2.jpg') }}"></div>
          </div>
 
+        <div class="col-xs-offset-1 col-xs-10 col-xs-offset-1">
+
+            <h2 style="text-align: center">Номера</h2>
+
+
+
+
+
 
         <div class="col-xs-offset-1 col-xs-10 col-xs-offset-1">
-        <h2 style="text-align: center">Аппартаменты</h2>
+
+        <h2 style="text-align: center">Аппартаменты общего пользования</h2>
 
 <div class="col-xs-4">
-<img  class="img-responsive img-circle" src="{{ url('img/kuh.png') }}" style="width:100%" align="left" alt="сейф"/>
+<img  class="img-responsive img-circle" src="{{ url('img/kuh.jpg') }}" style="width:100%" align="left" alt="сейф"/>
     <h3 style="text-align:center">Кухня</h3>
-    На кухне имеется :
-    <ul>
-        <li>Посуда</li>
-        <li>Чайник</li>
-        <li>Плитка</li>
-        <li>Мультиварка</li>
-        <li>Холодильник</li>
-    </ul>
-    </div>
+
             <div class="col-xs-4">
 <img  class="img-responsive img-circle" src="{{ url('img/duw.png') }}"  style="width:100%;" align="center" alt="сейф"/>
-                <h3 style="text-align:center">Душь</h3>
-            При заезде выдаем полотенце, В душе имеется мыло и шампунь.
-
+                <h3 style="text-align:center">Душ</h3>
             </div>
             <div class="col-xs-4">
-<img  class="img-responsive img-circle" src="{{ url('img/duw.png') }}" style="width: 100%;" align="right" alt="сейф"/>
+<img  class="img-responsive img-circle" src="{{ url('img/pra4.jpg') }}" style="width: 100%;" align="right" alt="сейф"/>
                        <h3 style="text-align:center">Прачечная</h3>
-                В прачечной возможно воспользоваться стиральной машиной утюгом и феном
                 </div>
                 </div>
 
@@ -68,19 +66,16 @@
 
 
         <h2>Номера</h2>
-        <h2> Цены</h2>
+
 
         <h2>Отзывы</h2>
+
         <h2>Контакты</h2>
 
 
 
 </div>`
 
-
-
-
-    </section>
 
 </div>
 

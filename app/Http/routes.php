@@ -11,11 +11,22 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::get('setlocale/{locale}', function ($locale) {
+
+    if (in_array($locale, \Config::get('app.locales'))) {   # Проверяем, что у пользователя выбран доступный язык
+        Session::put('locale', $locale);                    # И устанавливаем его в сессии под именем locale
+    }
+    return redirect()->back();                              # Редиректим его <s>взад</s> на ту же страницу
 });
 
+Route::get('/','NomerController@index');
+Route::get('nomer/{id}', 'NomerController@show');
 Route::resource('nomer', 'NomerController');
 Route::resource('feed','FeedsController');
 Route::resource('comment','CommentController');
 Route::resource('bron', 'BronController');
+Route::get('calendar', 'EventController@index');
+Route::get('kak_go', 'HotelController@index');
+Route::get('contact','HotelController@contakt');
+

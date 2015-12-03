@@ -18,6 +18,7 @@ class NomerController extends Controller
     public function show($id)
     {
         $nomerRes = Nomer::where('id','=', $id)->firstOrFail();
+
         return view('nomer.nomer', ['nomer' => $nomerRes]);
     }
 }

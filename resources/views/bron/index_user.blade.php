@@ -14,13 +14,9 @@
                 <th>{{ $bron->nomer }}</th>
                 <th> {{ $bron->bron_comment }}</th>
                 <th>{{ $bron->kol }} </th>
-                <th>{{ $bron->k_start }}</th>
-                <th> {{ $bron->k_end }}</th>
+                <th>{{ $bron->start }}</th>
+                <th> {{ $bron->end }}</th>
             </tr>
-            @endforeach
-                </tbody>
-
-                </table>
 
 	</div>
 </div>

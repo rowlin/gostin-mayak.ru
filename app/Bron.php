@@ -7,13 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 class Bron extends Model
 {
     protected $table = 'bron';
-    protected $fillable = ['name',
+    protected $fillable = ['name','title',
         'phone',
         'mail',
         'bron_comment',
         'nomer',
-        'k_start',
-        'k_end',
+        'start',
+        'end',
         'predpl',
         'kol'];
 }

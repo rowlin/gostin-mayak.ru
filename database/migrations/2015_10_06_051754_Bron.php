@@ -14,15 +14,17 @@ class Bron extends Migration
     {
     Schema::create('bron', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('title');
             $table->string('name', 255);
             $table->integer('phone');
             $table->string('mail', 60);
             $table->text('bron_comment');
             $table->tinyInteger('kol');
             $table->tinyInteger('nomer');
+            $table->boolean('isAllDay');
             $table->boolean('predpl');
-            $table->date('k_start');
-            $table->date('k_end');
+            $table->date('start');
+            $table->date('end');
             $table->timestamps();
         });
     }

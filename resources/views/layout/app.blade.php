@@ -8,7 +8,8 @@
     <meta name="author" content="">
     <title>App</title>
 
-        <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+
+    <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
         <link href="{{ asset('/css/datepicker.css') }}" rel="stylesheet">
         <link rel="icon" type="image/png" href="{{ asset('/assets/ico/favicon.png') }}">
     <script type="text/javascript">
@@ -18,9 +19,9 @@
     </script>
 </head>
 <body>
+
  @include('partials._header')
     @include('partials._nav')
-
 
     @yield('content')
 
@@ -28,6 +29,7 @@
 
 
     <!-- Scripts -->
+    <script src="{{ asset('/js/moment.min.js') }}"></script>
     <script src="{{ asset('/js/vendor.js') }}"></script>
     <script src="{{ asset('/js/datepicker.js') }}"></script>
  @yield('scripts')

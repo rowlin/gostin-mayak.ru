@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests\CreateBronRequest;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use MaddHatter\LaravelFullcalendar\Event;
+use App\EventModel;
 class BronController extends Controller
 {
     /**
@@ -38,10 +39,16 @@ class BronController extends Controller
      */
     public function store(CreateBronRequest $request)
     {
-         $bron=$request->all();
+        //$bron= array($request->id, $request->name, $request->phone, $request->nomer, $request->kol, $request->bron_comment  );
 
+
+        $bron = $request->all();
+        //$title = $request->name;
+
+        //$Event = array($request->id, $request->start ,$request->end, $title ,'1');
+        //EventModel::create($Event);
         Bron::create($bron);
-        //var_dump($bron);
+        var_dump($bron);
        return redirect('bron');
     }
 
@@ -94,4 +101,8 @@ class BronController extends Controller
         Bron::find($id)->delete();
         return redirect('bron');
     }
+
+
+
+
 }

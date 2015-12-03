@@ -26,8 +26,8 @@ class CreateBronRequest extends Request
         return [
             'name' => 'required|min:3',
             'bron_comment' => 'required',
-            'k_start' => 'required|date',
-            'k_end' => 'required|date',
+            'start' => 'required|date',
+            'end' => 'required|date',
             'phone'=> 'required|digits_between:5,13',
             'mail'=>'required|email',
             'nomer'=> 'required'

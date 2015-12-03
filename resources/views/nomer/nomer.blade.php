@@ -65,8 +65,87 @@
             </div>
         </div>
         <!--снизу все фото с номерами -->
+
     </div>
-</div>
+
+
+    <div class="col-xs-offset-1 col-xs-10 col-xs-offset-1">
+
+        <h1 style="text-align: center; padding: 20px;">Аппартаменты общего пользования</h1>
+
+        <div class="col-xs-4">
+            <img  class="img-responsive img-circle" src="{{ url('img/kuh.jpg') }}" style="width:300px" align="center" alt="Кухня"/>
+            <h3 style="text-align:center">Кухня</h3>
+        </div>
+        <div class="col-xs-4">
+            <img  class="img-responsive img-circle" src="{{ url('img/duw.png') }}"  style="width:300px;" align="center" alt="Душ"/>
+            <h3 style="text-align:center">Душ</h3>
+        </div>
+        <div class="col-xs-4">
+            <img  class="img-responsive img-circle" src="{{ url('img/pra4.jpg') }}" style="width: 300px;" align="center" alt="Прачечная"/>
+            <h3 style="text-align:center">Прачечная</h3>
+        </div>
+
+    </div>
+
+    <div class="col-xs-offset-1 col-xs-10 col-xs-offset-1">
+
+        <h1  style="text-align: center">Услуги</h1>
+
+
+        <div class="col-xs-3">
+
+            <img  class="img-responsive " src="{{ url('img/usl/velo.png') }}" style="width:300px" align="center" alt="Кухня"/>
+            <h3 style="text-align:center"> Прокат велосипеда</h3>
+        </div>
+
+
+        <div class="col-xs-3">
+            <img  class="img-responsive " src="{{ url('img/usl/wifi.png') }}" style="width:300px" align="center" alt="Кухня"/>
+            <h3 style="text-align:center">Бесплатный Wi-fi</h3>
+        </div>
+
+        <div class="col-xs-3">
+            <img  class="img-responsive" src="{{ url('img/usl/avio.png') }}" style="width:300px" align="center" alt="Кухня"/>
+            <h3 style="text-align:center">Заказ билетов</h3>
+        </div>
+
+
+        <div class="col-xs-3">
+            <img  class="img-responsive " src="{{ url('img/usl/bag.png') }}" style="width:300px" align="center" alt="Кухня"/>
+            <h3 style="text-align:center">Камера хранения</h3>
+        </div>
+
+
+    </div>
+
+
+
+    <div class=" col-xs-12 col-md-12">
+
+        <h1  style="text-align: center">Контакты</h1>
+
+        <div class="col-xs-9 col-md-9">
+
+            <img class="img-responsive" src="{{ url('img/map.png') }}" style="height: 400px;width:100%">
+
+        </div>
+        <div class="col-xs-3 col-md-3" style="text-align: center">
+            <h3> мини-отель </h3>
+            <h2> "Старый маяк"</h2>
+            <h3>ул. Гжатская 22 к.1 </h3>
+            <h2>+7 (921) 764 27 94</h2>
+            <a href="" role="button" class="btn btn-info btn-primary active"  style=" max-width: 100%;" >Посмотреть на карте</a>
+
+            <!--Социальные кнопки-->
+        </div>
+
+
+    </div>
+
+
+    </div>
+
 
 @endsection
 

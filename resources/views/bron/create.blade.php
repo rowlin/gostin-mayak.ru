@@ -60,8 +60,8 @@
                 <table class="table">
                     <thead>
                     <tr>
-                        <th>Дата заезда  {!! Form::text('k_start', null , array('type'=> 'text', 'class' => 'span2','id'=>'dpd1')) !!}</th>
-                        <th> Дата выезда : {!! Form::text('k_end', null , array('type'=> 'text', 'class' => 'span2','id'=>'dpd2')) !!}</th>
+                        <th>Дата заезда  {!! Form::text('start', null , array('type'=> 'text', 'class' => 'span2','id'=>'dpd1')) !!}</th>
+                        <th> Дата выезда : {!! Form::text('end', null , array('type'=> 'text', 'class' => 'span2','id'=>'dpd2')) !!}</th>
                     <th><a href="">Проверить доступность</a></th>
                     </tr>
                     </thead>
@@ -108,7 +108,7 @@ case '4': $('#mess').html('<p>Одноместный номер.</p>'); break;
                         .trigger( "change" );
                 </script>
 
-
+   <script src="{{ asset('/js/datepicker.js') }}"></script>
             <script type="text/javascript">
                 // When the document is ready
                 $(document).ready(function () {
