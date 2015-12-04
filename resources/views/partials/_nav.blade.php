@@ -16,7 +16,7 @@
                     <a href='http://new/#nomer' id="top-nav">{{ trans('nomer.nomer') }}</a>
                 </li>
                 <li>
-                    <a href="{{ url('/feed/') }}">{{ trans('nomer.feedback') }}</a>
+                    <a href="{{ url('/feed/') }}"></a>
                 </li>
                 <li>
                     <a href="{{ url('/contakt') }}">{{ trans('nomer.contakt') }} </a>
@@ -43,7 +43,6 @@
             <li><a href="http://new/setlocale/en ">Eng</a></li>
                 <li><a href="http://new/setlocale/ru ">RU</a></li>
             </ul>
-
         </div>
     </div>
 </nav>

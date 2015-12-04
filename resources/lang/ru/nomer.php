@@ -14,7 +14,6 @@ return array(
     'contakt'=>'Контакты',
     'logoout'=>'Выход',
 
-
     //slider
     'checkin'=>'Дата заезда',
     'checkout'=>'Дата выезда',
@@ -26,14 +25,15 @@ return array(
     'nomer5'=> 'Одноместный номер' ,
     'nomervip'=> 'Vip (аппартаменты)',
 
-
+    'hallway' =>'коридор',
     'price' => 'Цена : ',
     'more'=> 'Подробнее',
     'nomers'=> 'Номера',
     'common_ares'=>'Аппартаменты общего пользования',
     'kitchen' => 'Кухня',
     'shower'=> 'Душ',
-'laundry' => 'Прачечная',
+    'laundry' => 'Прачечная',
+
 
     'services' => 'Услуги',
     'contacts' => 'Контакты',

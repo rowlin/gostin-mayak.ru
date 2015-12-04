@@ -14,7 +14,7 @@ return array(
     'checkin'=>'Check-in date',
     'checkout'=>'Check-out Date',
     'choose'=>'Choose apartments',
-
+    'hallway' => 'hallway',
     'nomer3'  => 'Triple room(for women)',
     'nomer2' => 'Triple room(for men)',
     'nomer4' => 'Double Room (2 bed)' ,
