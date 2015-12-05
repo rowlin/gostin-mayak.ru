@@ -4,7 +4,6 @@
 
 @section('content')
 
-
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -14,7 +13,6 @@
             <li data-target="#carousel-example-generic" data-slide-to="3"></li>
             <li data-target="#carousel-example-generic" data-slide-to="4"></li>
             <li data-target="#carousel-example-generic" data-slide-to="5"></li>
-
         </ol>
 
         <!-- Wrapper for slides -->
@@ -74,6 +72,7 @@
     </div> <!-- Carousel -->
 
 
+
     <div class="container">
         <div class="row">
 
@@ -84,8 +83,18 @@
                     <div class="panel panel-default">
                         <h2 class="panel-heading" style="text-align:center ">{{ $nomer->name }}</h2>
                         <div class="panel-body">
+
+
                             <img src="{!! $nomer->url !!}/1.jpg" class="img-responsive" alt="{{$nomer->opis}}">
-                            <p> {{ $nomer->opis }}</p>
+
+
+                            <!--затухание текста-->
+                            <!--одностночное отображение-->
+                            
+
+ <div class="test">
+ {{ $nomer->opis }}
+        </div>
                             <h4> Цена: {{ $nomer->price }}</h4>
                             <a class="btn btn-primary left" style="right: auto" href="{{ url('nomer', $nomer->id) }}">Подробнее</a>
                             <a class="btn btn-danger " style="left: auto;" href="{{ url('bron/create') }}" >Забронировать</a>
