@@ -72,6 +72,28 @@
     </div> <!-- Carousel -->
 
 
+<!--О нас-->
+
+<div class="container">
+    <div class="row">
+    <h2 style="text-align:center">{{ trans('nomer.about') }}</h2>
+        <div class="col-xs-12 col-md-8">
+            <p>{{ trans('nomer.about_t1')}}</p>
+            <p>{{ trans('nomer.about_t2')}}</p>
+            <p>{{ trans('nomer.about_t3')}}</p>
+            <p>{{ trans('nomer.about_t4')}}</p>
+            <p>{{ trans('nomer.about_t5')}}</p>
+            <p>{{ trans('nomer.hello')}}</p>
+        </div>
+
+    <div class="col-xs-12 col-md-4">
+<img src="{{ url('images/1/2.jpg') }}" class="img-thumbnail" style="width:100%;" alt=""/>
+<img  src="{{ url('images/1/1.jpg') }}" class="img-thumbnail" style="width:100%;" alt=""/>
+    </div>
+    </div>
+    </div>
+
+
 
     <div class="container">
         <div class="row">
@@ -79,22 +101,16 @@
             <h2 style="text-align: center;">{{ trans('nomer.nomers') }}</h2>
 
             @foreach($nomers as $nomer)
-                <div class="col-xs-6 col-md-6 col-xs-offset-0 col-md-offset-0">
-                    <div class="panel panel-default">
-                        <h2 class="panel-heading" style="text-align:center ">{{ $nomer->name }}</h2>
+                <div class="col-xs-12 col-md-6" style="padding-top:40px;">
+                    <div class="panel panel-default" >
+                        <h2 class="panel-heading" style="text-align:center; margin-top:0px;">{{ $nomer->name }}</h2>
                         <div class="panel-body">
-
 
                             <img src="{!! $nomer->url !!}/1.jpg" class="img-responsive" alt="{{$nomer->opis}}">
 
-
-                            <!--затухание текста-->
-                            <!--одностночное отображение-->
-                            
-
- <div class="test">
- {{ $nomer->opis }}
-        </div>
+                                 <div class="to_opis">
+                                 {{ $nomer->opis }}
+                                        </div>
                             <h4> Цена: {{ $nomer->price }}</h4>
                             <a class="btn btn-primary left" style="right: auto" href="{{ url('nomer', $nomer->id) }}">Подробнее</a>
                             <a class="btn btn-danger " style="left: auto;" href="{{ url('bron/create') }}" >Забронировать</a>
@@ -105,4 +121,7 @@
         </div>
     </div>
 
+
 @endsection
+
+

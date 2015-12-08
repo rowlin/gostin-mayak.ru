@@ -16,6 +16,7 @@
     </div>
     <div class="col-xs-8 col-md-8 col-lg-6">
         <img class="img-responsive" src="{{ url('img/map.png') }}" style="height: 400px;width:100%">
+        
         </div>
     <br>
     <h2>Eсли возникли трудности - звоните.</h2>

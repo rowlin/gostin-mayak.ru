@@ -8,7 +8,7 @@
             {!! Form::open([
             'route' => 'bron.store'
             ]) !!}
-            <h2 style="text-align: center">Забронировать номер</h2>
+            <h2 style="text-align: center">{{ trans('nomer.booking_nomer')}}</h2>
                 @if ($errors->any())
                     <ul class="alert alert-danger">
                         @foreach( $errors->all() as $error)
@@ -17,13 +17,13 @@
                     </ul>
                 @endif
             <div class="form-group">
-                {!! Form::label('name', 'Введите Имя :', ['class' => 'control-label']) !!}
+                {!! Form::label('name', trans('nomer.enter_name'), ['class' => 'control-label']) !!}
                 {!! Form::text('name', null, ['class' => 'form-control']) !!}
             </div>
             <div class="form-group">
-                                {!! Form::label('phone', 'Номер телефона :', ['class' => 'control-label']) !!}
+                                {!! Form::label('phone', trans('nomer.enter_phone'), ['class' => 'control-label']) !!}
                 {!! Form::text('phone', null, ['class' => 'form-control']) !!}
-                                {!! Form::label('mail', 'Почта :', ['class' => 'control-label']) !!}
+                                {!! Form::label('mail', trans('nomer.enter_mail'), ['class' => 'control-label']) !!}
                 {!! Form::text('mail', null, ['class' => 'form-control']) !!}
             </div>
 
@@ -32,46 +32,49 @@
                 <div class="row">
                     <div class="col-xs-6" >
 
-                        {!! Form::label('nomer', 'Выбирете номер :', ['class' => 'control-label']) !!}
+                        {!! Form::label('nomer', trans('nomer.enter_nomer'), ['class' => 'control-label']) !!}
                         {!! Form::select('nomer', [
-                        '2'  => 'Трехместный номер(женский)',
-                        '1' => 'Трехместный номер(мужской)',
-                        '3' => 'Двухместный номер №4' ,
-                        '6' => 'Двухместный номер №7',
-                        '4'=> 'Одноместный номер' ,
-                        '7'=> 'Vip (аппартаменты)']) !!}
+                        '2'  => trans('nomer.nomer3'),
+                        '1' => trans('nomer.nomer2'),
+                        '3' =>  trans('nomer.nomer4'),
+                        '6' => trans('nomer.nomer7'),
+                        '4'=> trans('nomer.nomer5') ,
+                        '7'=> trans('nomer.nomervip')
+                        ]) !!}
 
                         <div id="mess"></div>
                 </div>
 
                 <div class="col-xs-6">
-                    {!! Form::label('', 'Просмотреть номера :', ['class' => 'control-label']) !!}
-                    <a href="{{ url('nomer/7') }}">Vip номер</a><br/>
-                    <a href=" {{ url('nomer/4') }}">Одноместный номер</a><br/>
-                    <a href="{{url('nomer/6')}}">Двухместный номер с общей краватью - №7</a><br/>
-                    <a href="{{url('nomer/3')}}">Двухместный номер с раздельными краватями -№4</a><br/>
-                    <a href="{{ url('nomer/1') }}">Трехместный номер(мужской)</a><br/>
-                    <a href="{{ url('nomer/2') }}">Трехместный номер(женский)</a>
+
+                    {!! Form::label('', trans('nomer.show_nomer'), ['class' => 'control-label']) !!}
+                <br>
+                    <a href="{{ url('nomer/1') }}">{{trans('nomer.nomervip')}}</a><br/>
+                    <a href=" {{ url('nomer/3') }}">{{ trans('nomer.nomer5')}}</a><br/>
+                    <a href="{{url('nomer/2')}}">{{ trans('nomer.nomer7') }}</a><br/>
+                    <a href="{{url('nomer/4')}}">{{ trans('nomer.nomer4') }}</a><br/>
+                    <a href="{{ url('nomer/5') }}">{{ trans('nomer.nomer3')}}</a><br/>
+                    <a href="{{ url('nomer/6') }}">{{ trans('nomer.nomer2')}}</a>
                 </div>
                 </div>
              <!--подобрать изображения и сделать встроку выбор по изображениям-->
-                </div><!--well--->
+                </div><!--well-->
             <div class="well">
                 <table class="table">
                     <thead>
                     <tr>
-                        <th>Дата заезда  {!! Form::text('start', null , array('type'=> 'text', 'class' => 'span2','id'=>'dpd1')) !!}</th>
-                        <th> Дата выезда : {!! Form::text('end', null , array('type'=> 'text', 'class' => 'span2','id'=>'dpd2')) !!}</th>
-                    <th><a href="">Проверить доступность</a></th>
+                        <th>{{ trans('nomer.checkin')}}  {!! Form::text('start', null , array('type'=> 'text', 'class' => 'span2','id'=>'dpd1')) !!}</th>
+                        <th> {{ trans('nomer.checkout')}} {!! Form::text('end', null , array('type'=> 'text', 'class' => 'span2','id'=>'dpd2')) !!}</th>
+                    <th><a href="">{{ trans('nomer.check_ava')}}</a></th>
                     </tr>
                     </thead>
                 </table>
                 <div class="form-group">
-                    {!! Form::label('bron_comment', 'Комментарий:', ['class' => 'control-label']) !!}
+                    {!! Form::label('bron_comment', trans('nomer.comment'), ['class' => 'control-label']) !!}
                     {!! Form::textarea('bron_comment', null, ['class' => 'form-control']) !!}
                 </div>
                 <div class="form-group">
-                {!! Form::submit('Забронировать', ['class' => 'btn btn-primary']) !!}
+                {!! Form::submit(trans('nomer.booking'), ['class' => 'btn btn-primary']) !!}
                 </div>
                 {!! Form::close() !!}
             </div>
@@ -102,7 +105,7 @@ case '4': $('#mess').html('<p>Одноместный номер.</p>'); break;
                             var str = "";
                             $( "select option:selected" ).each(function() {
                                 str += $( this ).html();
-                            });
+                            })
                             $( "#mess" ).html( str );
                         })
                         .trigger( "change" );
